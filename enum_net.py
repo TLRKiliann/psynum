@@ -4,11 +4,22 @@
 
 import requests
 
-
-rg = requests.get('https://api.github.com/events')
+payload = {'key1': 'value1', 'key2': 'value2'}
+rg = requests.get('https://api.github.com/events', data=payload)
+print("---URL :---")
 print(rg.url)
+print("---Headers-Content-Type :---")
+print(rg.headers['content-type'])
+print("---Encoding :---")
+print(rg.encoding)
+#print(rg.text)
+#print(rg.content)
+#print(rg.json())
+print("---Raw :---")
+print(rg.raw)
+print("---Requests GET :---")
 print(rg)
-print("get finished")
+print("---get finished---")
 print("-------------")
 
 rp = requests.post('https://httpbin.org/post', data={"key":"value"})
