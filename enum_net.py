@@ -5,7 +5,7 @@
 import requests
 
 payload = {'key1': 'value1', 'key2': 'value2'}
-rg = requests.get('https://api.github.com/events', data=payload)
+rg = requests.get('https://api.github.com/events/get', data=payload)
 print("---GET URL :---")
 print(rg.url)
 print("---GET + Headers-Content-Type :---")
